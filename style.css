@@ -1,0 +1,106 @@
+/* Variables */
+:root {
+    /* ## Colors */
+
+/* ### Primary */
+
+--blue-400: hsl(246, 80%, 60%);
+
+--red-300-work: hsl(15, 100%, 70%);
+--soft-blue-400-play: hsl(195, 74%, 62%);
+--soft-red-300-study: hsl(348, 100%, 68%);
+--lime-green-500-exercise: hsl(145, 58%, 55%);
+--violet-500-social: hsl(264, 64%, 52%);
+--soft-orange-selfcare: hsl(43, 84%, 65%);
+
+/* ### Neutral */
+
+--blue-900: hsl(226, 43%, 10%);
+--blue-800: hsl(235, 46%, 20%);
+--desaturated-blue-400: hsl(235, 45%, 61%);
+--blue-200: hsl(236, 100%, 87%)
+
+/* ## Typography */
+
+/* ### Body Copy */
+
+--fs-card-title: 1.125rem;
+
+/* ### Font */
+
+--ff: RubiK, sans-serif;
+--fw-light: 300;
+--fw-regular: 400;
+--fw-bold: 500;
+}
+
+/* CSS Reset */
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+	margin: 0;
+}
+
+body {
+	/* 3. Add accessible line-height */
+	line-height: 1.5;
+	/* 4. Improve text rendering */
+	-webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+	text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+	isolation: isolate;
+}

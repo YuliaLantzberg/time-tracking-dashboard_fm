@@ -1,37 +1,37 @@
 /* Variables */
 :root {
-    /* ## Colors */
+	/* ## Colors */
 
-/* ### Primary */
+	/* ### Primary */
 
---blue-400: hsl(246, 80%, 60%);
+	--blue-400: hsl(246, 80%, 60%);
 
---red-300-work: hsl(15, 100%, 70%);
---soft-blue-400-play: hsl(195, 74%, 62%);
---soft-red-300-study: hsl(348, 100%, 68%);
---lime-green-500-exercise: hsl(145, 58%, 55%);
---violet-500-social: hsl(264, 64%, 52%);
---soft-orange-selfcare: hsl(43, 84%, 65%);
+	--red-300-work: hsl(15, 100%, 70%);
+	--soft-blue-400-play: hsl(195, 74%, 62%);
+	--soft-red-300-study: hsl(348, 100%, 68%);
+	--lime-green-500-exercise: hsl(145, 58%, 55%);
+	--violet-500-social: hsl(264, 64%, 52%);
+	--soft-orange-selfcare: hsl(43, 84%, 65%);
 
-/* ### Neutral */
+	/* ### Neutral */
 
---blue-900: hsl(226, 43%, 10%);
---blue-800: hsl(235, 46%, 20%);
---desaturated-blue-400: hsl(235, 45%, 61%);
---blue-200: hsl(236, 100%, 87%)
+	--blue-900: hsl(226, 43%, 10%);
+	--blue-800: hsl(235, 46%, 20%);
+	--desaturated-blue-400: hsl(235, 45%, 61%);
+	--blue-200: hsl(236, 100%, 87%);
 
-/* ## Typography */
+	/* ## Typography */
 
-/* ### Body Copy */
+	/* ### Body Copy */
 
---fs-card-title: 1.125rem;
+	--fs-card-title: 1.125rem;
 
-/* ### Font */
+	/* ### Font */
 
---ff: RubiK, sans-serif;
---fw-light: 300;
---fw-regular: 400;
---fw-bold: 500;
+	--ff: RubiK, sans-serif;
+	--fw-light: 300;
+	--fw-regular: 400;
+	--fw-bold: 500;
 }
 
 /* CSS Reset */
@@ -103,4 +103,145 @@ h6 {
 #root,
 #__next {
 	isolation: isolate;
+}
+
+/* Common styles */
+
+body {
+	background-color: var(--blue-900);
+	display: grid;
+	place-items: center;
+	padding: 2rem 1.25rem;
+	font-family: var(--ff);
+}
+
+.dashboard {
+	display: grid;
+	gap: 2rem;
+}
+
+.dashboard__main {
+	border-radius: 1rem;
+	background-color: var(--blue-800);
+}
+
+.dashboard__user {
+	display: flex;
+	background-color: var(--blue-400);
+	border-radius: 1rem;
+	padding: 1.5rem;
+	gap: 1rem;
+}
+
+.dashboard__user-img {
+	width: 3.5rem;
+	height: 3.5rem;
+	border: 3px solid white;
+	border-radius: 50%;
+}
+.dashboard__user-name {
+	color: var(--blue-200);
+	font-size: 0.875rem;
+}
+
+.dashboard__user-name h1 {
+	color: whitesmoke;
+	font-weight: var(--fw-light);
+	font-size: 1.35rem;
+	line-height: 1.2;
+}
+
+.dashboard__list {
+	display: flex;
+	list-style: none;
+	justify-content: space-evenly;
+	gap: 3rem;
+	padding: 1.5rem 2rem;
+	color: var(--desaturated-blue-400);
+}
+
+.dashboard__cards {
+	display: grid;
+	gap: 2rem;
+}
+
+.dashboard__card {
+	border-radius: 1rem;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	height: 9rem;
+}
+
+.dashboard__card img {
+	align-self: flex-end;
+	margin-right: 1.25rem;
+	margin-top: -1rem;
+}
+
+.dashboard__card:nth-child(1) {
+	background-color: var(--red-300-work);
+}
+
+.dashboard__card:nth-child(2) {
+	background-color: var(--soft-blue-400-play);
+}
+
+.dashboard__card:nth-child(3) {
+	background-color: var(--soft-red-300-study);
+}
+
+.dashboard__card:nth-child(4) {
+	background-color: var(--lime-green-500-exercise);
+}
+
+.dashboard__card:nth-child(5) {
+	background-color: var(--violet-500-social);
+}
+
+.dashboard__card:nth-child(6) {
+	background-color: var(--soft-orange-selfcare);
+}
+
+.card {
+	background-color: var(--blue-800);
+	padding: 1.5rem;
+	border-radius: 1rem;
+	position: absolute;
+	top: 2rem;
+	width: 100%;
+	padding-bottom: 3rem;
+}
+
+.card__title {
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	font-size: var(--fs-card-title);
+	font-weight: var(--fw-bold);
+}
+
+.card__title-dots {
+	color: var(--desaturated-blue-400);
+	font-size: 2rem;
+	line-height: 0.5;
+}
+
+.card__content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.card__hours {
+	font-size: 2rem;
+	line-height: 1.25;
+	color: white;
+	font-weight: var(--fw-light);
+}
+
+.card__previous {
+	color: var(--desaturated-blue-400);
+	font-size: 0.875;
 }

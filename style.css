@@ -29,6 +29,7 @@
 	/* ### Font */
 
 	--ff: RubiK, sans-serif;
+	--ff-dots: Roboto, sans-serif;
 	--fw-light: 300;
 	--fw-regular: 400;
 	--fw-bold: 500;
@@ -166,6 +167,17 @@ body {
 	color: var(--desaturated-blue-400);
 }
 
+.dashboard__list-item {
+	transition: color 0.3s;
+	cursor: pointer;
+}
+
+.dashboard__list-item:hover,
+.dashboard__list-item:active,
+.dashboard__list-item:focus {
+	color: white;
+}
+
 .dashboard__cards {
 	display: flex;
 	gap: 1rem;
@@ -221,6 +233,12 @@ body {
 	padding-bottom: 3rem;
 	margin-top: 2rem;
 	z-index: 10;
+	cursor: pointer;
+	transition: background-color 0.7s;
+}
+
+.card:hover {
+	background-color: var(--desaturated-blue-400);
 }
 
 .card__title {
@@ -232,9 +250,15 @@ body {
 }
 
 .card__title-dots {
-	color: var(--desaturated-blue-400);
+	color: var(--blue-200);
 	font-size: 2rem;
 	line-height: 0.5;
+	font-family: var(--ff-dots);
+	cursor: pointer;
+}
+
+.card__title-dots:hover {
+	color: white;
 }
 
 .card__content {
@@ -252,7 +276,7 @@ body {
 }
 
 .card__previous {
-	color: var(--desaturated-blue-400);
+	color: var(--blue-200);
 	font-size: 0.875rem;
 }
 

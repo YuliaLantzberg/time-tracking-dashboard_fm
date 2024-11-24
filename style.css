@@ -173,8 +173,7 @@ body {
 }
 
 .dashboard__list-item:hover,
-.dashboard__list-item:active,
-.dashboard__list-item:focus {
+.active {
 	color: white;
 }
 
@@ -278,6 +277,7 @@ body {
 .card__previous {
 	color: var(--blue-200);
 	font-size: 0.875rem;
+	text-transform: capitalize;
 }
 
 @media (min-width: 48rem) {

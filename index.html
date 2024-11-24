@@ -37,9 +37,9 @@
 					</div>
 				</div>
 				<ul class="dashboard__list">
-					<li class="dashboard__list-item">Daily</li>
-					<li class="dashboard__list-item">Weekly</li>
-					<li class="dashboard__list-item">Monthly</li>
+					<li class="dashboard__list-item" id="daily">Daily</li>
+					<li class="dashboard__list-item" id="weekly">Weekly</li>
+					<li class="dashboard__list-item" id="monthly">Monthly</li>
 				</ul>
 			</div>
 			<div class="dashboard__cards">
@@ -49,7 +49,7 @@
 						<h3 class="card__title">
 							Work <span class="card__title-dots">...</span>
 						</h3>
-						<div class="card__content">
+						<div class="card__content" data-card="work">
 							<p class="card__hours">32hrs</p>
 							<p class="card__previous">Last Week - 30hrs</p>
 						</div>
@@ -61,7 +61,7 @@
 						<h3 class="card__title">
 							Play <span class="card__title-dots">...</span>
 						</h3>
-						<div class="card__content">
+						<div class="card__content" data-card="play">
 							<p class="card__hours">10hrs</p>
 							<p class="card__previous">Last Week - 8hrs</p>
 						</div>
@@ -73,7 +73,7 @@
 						<h3 class="card__title">
 							Study <span class="card__title-dots">...</span>
 						</h3>
-						<div class="card__content">
+						<div class="card__content" data-card="study">
 							<p class="card__hours">4hrs</p>
 							<p class="card__previous">Last Week - 7hrs</p>
 						</div>
@@ -85,7 +85,7 @@
 						<h3 class="card__title">
 							Exercise <span class="card__title-dots">...</span>
 						</h3>
-						<div class="card__content">
+						<div class="card__content" data-card="exercise">
 							<p class="card__hours">4hrs</p>
 							<p class="card__previous">Last Week - 5hrs</p>
 						</div>
@@ -97,8 +97,8 @@
 						<h3 class="card__title">
 							Social <span class="card__title-dots">...</span>
 						</h3>
-						<div class="card__content">
-							<p class="card__hours">5hrs</p>
+						<div class="card__content" data-card="social">
+							<p class="card__hours" data-card="social">5hrs</p>
 							<p class="card__previous">Last Week - 10hrs</p>
 						</div>
 					</div>
@@ -109,7 +109,7 @@
 						<h3 class="card__title">
 							Self Care <span class="card__title-dots">...</span>
 						</h3>
-						<div class="card__content">
+						<div class="card__content" data-card="self care">
 							<p class="card__hours">2hrs</p>
 							<p class="card__previous">Last Week - 3hrs</p>
 						</div>

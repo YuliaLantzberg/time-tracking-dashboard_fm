@@ -113,16 +113,21 @@ body {
 	place-items: center;
 	padding: 2rem 1.25rem;
 	font-family: var(--ff);
+	height: 100vh;
 }
 
 .dashboard {
-	display: grid;
-	gap: 2rem;
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
+	max-width: 76.5rem;
 }
 
 .dashboard__main {
 	border-radius: 1rem;
 	background-color: var(--blue-800);
+	display: flex;
+	flex-direction: column;
 }
 
 .dashboard__user {
@@ -131,6 +136,7 @@ body {
 	border-radius: 1rem;
 	padding: 1.5rem;
 	gap: 1rem;
+	flex-grow: 1;
 }
 
 .dashboard__user-img {
@@ -147,7 +153,7 @@ body {
 .dashboard__user-name h1 {
 	color: whitesmoke;
 	font-weight: var(--fw-light);
-	font-size: 1.35rem;
+	font-size: 2rem;
 	line-height: 1.2;
 }
 
@@ -161,8 +167,11 @@ body {
 }
 
 .dashboard__cards {
-	display: grid;
-	gap: 2rem;
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
 }
 
 .dashboard__card {
@@ -170,14 +179,15 @@ body {
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
+	width: 100%;
 	position: relative;
-	height: 9rem;
 }
 
 .dashboard__card img {
 	align-self: flex-end;
 	margin-right: 1.25rem;
-	margin-top: -1rem;
+	position: absolute;
+	top: -1rem;
 }
 
 .dashboard__card:nth-child(1) {
@@ -208,10 +218,9 @@ body {
 	background-color: var(--blue-800);
 	padding: 1.5rem;
 	border-radius: 1rem;
-	position: absolute;
-	top: 2rem;
-	width: 100%;
 	padding-bottom: 3rem;
+	margin-top: 2rem;
+	z-index: 10;
 }
 
 .card__title {
@@ -232,6 +241,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin: 1rem 0;
 }
 
 .card__hours {
@@ -243,5 +253,45 @@ body {
 
 .card__previous {
 	color: var(--desaturated-blue-400);
-	font-size: 0.875;
+	font-size: 0.875rem;
+}
+
+@media (min-width: 48rem) {
+	.dashboard {
+		flex-direction: row;
+	}
+	.dashboard__user {
+		max-height: 80%;
+		flex-direction: column;
+	}
+
+	.dashboard__list {
+		flex-direction: column;
+		gap: 1rem;
+	}
+	.dashboard__cards {
+		flex-wrap: wrap;
+		flex-direction: row;
+		row-gap: 2rem;
+		justify-content: space-between;
+		min-width: 85%;
+		padding: 0 3rem;
+	}
+
+	.dashboard__card {
+		max-width: 30%;
+	}
+
+	.dashboard__user-name h1 {
+		padding-right: 2rem;
+	}
+
+	.card {
+		padding-bottom: 1rem;
+	}
+
+	.card__content {
+		flex-direction: column;
+		align-items: flex-start;
+	}
 }
